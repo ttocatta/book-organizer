@@ -94,19 +94,16 @@ Tech
 
 The following dependencies are included in this build:
 
-Apache PDFBox: `pdfbox-app-3.0.6.jar`
+- Apache PDFBox: `pdfbox-app-3.0.6.jar`
+- Apache POI: `poi-ooxml-full-5.2.3.jar`
+- Apache Commons Collections: `commons-collections4-4.4.jar`
+- Apache Commons IO: `commons-io-2.11.0.jar`
+- Log4j API: `log4j-api-2.18.0.jar`
+- XMLBeans: `xmlbeans-5.1.1.jar`
 
-Apache POI: `poi-ooxml-full-5.2.3.jar`
+(in case you don't have them you must install it, or clone my uploaded `lib` named `poi&apache` containting them)
 
-Apache Commons Collections: `commons-collections4-4.4.jar`
-
-Apache Commons IO: `commons-io-2.11.0.jar`
-
-Log4j API: `log4j-api-2.18.0.jar`
-
-XMLBeans: `xmlbeans-5.1.1.jar`
-
-(in case you don't have them you must install it, or clone my uploaded `lib` containting them)
+(it would be much better if you download the folder and paste it in the projects `lib` so youre not gonna configure much other than adding the folder to projects library and module)
 
 ## How to Run
 1. Clone the repository `git clone https://github.com/ttocatta/book-organizer`
