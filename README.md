@@ -90,11 +90,18 @@ Tech
 - CI: GitHub Actions
 - Automated secret scanning: Gitleaks (GitHub Actions)
   
-Libraries
-- Apache PDFBox (`pdfbox-app-3.0.6.jar`)
-- Apache POI (`poi-bin-5.2.3`)
+## Libraries
 
+The following dependencies are included in this build:
 
+Apache PDFBox: `pdfbox-app-3.0.6.jar`
+Apache POI: `poi-ooxml-full-5.2.3.jar`
+Apache Commons Collections: `commons-collections4-4.4.jar`
+Apache Commons IO: `commons-io-2.11.0.jar`
+Log4j API: `log4j-api-2.18.0.jar`
+XMLBeans: `xmlbeans-5.1.1.jar`
+
+(in case you don't have them you must install it, or clone my uploaded `lib` containting them)
 
 ## How to Run
 1. Clone the repository `git clone https://github.com/ttocatta/book-organizer`
