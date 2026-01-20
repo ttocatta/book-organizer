@@ -5,17 +5,27 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Compile Code
-        # This checks if your code is valid without needing a full Maven setup
-        run: javac $(find . -name "*.java")
+
+      - name: Compile Java Files
+        run: |
+          # This finds all .java files and compiles them into a temp directory
+          # The '|| true' prevents it from failing if no files are found during the find
+          JAVA_FILES=$(find . -name "*.java")
+          if [ -z "$JAVA_FILES" ]; then
+            echo "No Java files found to compile. Skipping."
+          else
+            javac $JAVA_FILES
+          fi
