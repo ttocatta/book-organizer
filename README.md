@@ -1,4 +1,57 @@
-This is a "Book Organizer" Program that aims to create a personalized library for people, it can be used for digitally storing and listing of books
+# Book Organizer
+
+[![CI](https://github.com/ttocatta/book-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/ttocatta/book-organizer/actions)
+[![Gitleaks](https://github.com/ttocatta/book-organizer/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/ttocatta/book-organizer/actions)
+[![License](https://img.shields.io/github/license/ttocatta/book-organizer.svg)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/ttocatta/book-organizer.svg)](https://github.com/ttocatta/book-organizer/commits/main)
+
+A small Java project that helps you organize and track books. Intended as a clean, resume-friendly sample project showing build/test automation and security checks.
+
+Quick start (local)
+Prerequisites:
+- Java 17+
+- Maven
+- Git (for full history scans if using gitleaks locally)
+
+Clone, build, and run:
+```bash
+git clone https://github.com/ttocatta/book-organizer.git
+cd book-organizer
+mvn clean package
+# run the app (example)
+java -jar target/book-organizer.jar
+```
+
+Run tests:
+```bash
+mvn test
+```
+
+Security & secret scanning
+- This repository runs Gitleaks on pushes and PRs to catch accidental secrets.
+- To run the same scan locally (no binary in repo):
+  - Docker (recommended):
+    docker run --rm -v "${PWD}:/repo" zricethezav/gitleaks:latest detect /repo --report-format json --report-path /repo/gitleaks-report.json
+  - Or use a local gitleaks executable (do NOT commit the exe):
+    ./gitleaks detect --source . --report-format json --report-path ./gitleaks-report.json
+
+If Gitleaks finds a secret:
+1. Rotate the exposed credential immediately with the provider.
+2. Remove the secret from git history (use git-filter-repo or BFG) and force-push the cleaned repo.
+3. Re-run scans and confirm remediation.
+
+Repository hygiene
+- License: MIT (see LICENSE)
+- If you plan to contribute, read CONTRIBUTING.md and CODE_OF_CONDUCT.md
+- For security issues: see SECURITY.md
+
+Badges and status
+- CI shows build & tests status.
+- Gitleaks workflow prevents secret leaks from being merged.
+
+Contact / Resume note
+- This repo is maintained as a resume reference demonstrating secure CI and best-practice repository hygiene.
+
 
 
 ## Function:
@@ -30,16 +83,17 @@ This is a "Book Organizer" Program that aims to create a personalized library fo
 
 ## Resources Used
 
-Language
-- Java
-
+Tech
+- Java 17
+- Maven
+- Unit tests with JUnit
+- CI: GitHub Actions
+- Automated secret scanning: Gitleaks (GitHub Actions)
+  
 Libraries
 - Apache PDFBox (`pdfbox-app-3.0.6.jar`)
 - Apache POI (`poi-bin-5.2.3`)
 
-Development Environment
-- IntelliJ IDEA (recommended)
-- Eclipse
 
 
 ## How to Run
