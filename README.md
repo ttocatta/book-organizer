@@ -97,8 +97,9 @@ Libraries
 
 
 ## How to Run
-1. Clone the repository `src`
-2. Open the project in IntelliJ IDEA (or any Java IDE)
+1. Clone the repository
+2. Look for `src` folder
+3. Open the project in IntelliJ IDEA (or any Java IDE)
 4. Ensure the required libraries are added to the project classpath
 5. Locate the `BookOrganizerApp` class
 6. Run the program
