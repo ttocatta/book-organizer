@@ -42,16 +42,11 @@ If Gitleaks finds a secret:
 
 Repository hygiene
 - License: MIT (see LICENSE)
-- If you plan to contribute, read CONTRIBUTING.md and CODE_OF_CONDUCT.md
-- For security issues: see SECURITY.md
+- If you plan to contribute, read CONTRIBUTING.md
 
 Badges and status
 - CI shows build & tests status.
 - Gitleaks workflow prevents secret leaks from being merged.
-
-Contact / Resume note
-- This repo is maintained as a resume reference demonstrating secure CI and best-practice repository hygiene.
-
 
 
 ## Function:
