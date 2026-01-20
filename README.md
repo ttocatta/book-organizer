@@ -18,7 +18,7 @@ Clone, build, and run:
 git clone https://github.com/ttocatta/book-organizer.git
 cd book-organizer
 mvn clean package
-# run the app (example)
+
 java -jar target/book-organizer.jar
 ```
 
